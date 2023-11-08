@@ -19,7 +19,7 @@ public class PerfectNum {
         }if (sum==num){
             System.out.println("Perfect number");
         }else {
-            System.out.println("not a perfecrt");
+            System.out.println("not a perfect");
         }
     }
 }
