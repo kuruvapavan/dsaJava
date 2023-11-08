@@ -30,7 +30,7 @@ public class CGPA {
             case "A+":
                 return 4.0;
             case  "A":
-                return 4.0;
+                return 3.8;
             case "A-":
                 return 3.7;
             case "B+":
