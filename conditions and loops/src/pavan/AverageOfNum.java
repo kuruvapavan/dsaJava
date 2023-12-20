@@ -21,22 +21,22 @@ public class AverageOfNum {
 //        avg=sum/limit;
 //        System.out.println(avg);
 
-        int limit=0;
+        int num;
         int sum=0;
-        float avg;
-        int number;
+        int avg=0;
         int count=0;
-        System.out.println("enter the limit: ");
+        int limit=0;
+        System.out.println("Enter the limit: ");
         Scanner in = new Scanner(System.in);
         limit=in.nextInt();
         while (count<limit){
-            System.out.println("enter the number"+(count+1));
-            number=in.nextInt();
-            sum=sum+number;
+            System.out.println("enter the number "+(count+1));
+            num=in.nextInt();
+            sum=sum+num;
             count++;
         }
         avg=sum/limit;
-        System.out.println(avg);
+        System.out.println("Average is :"+avg);
     }
     }
 

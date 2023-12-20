@@ -12,7 +12,7 @@ public class NcrAndNpr {
         int ncr=1;
         int npr=1;
         for (int i=1;i<=r;i++){
-            ncr = ncr*n/i;
+            ncr=ncr*n/i;
             npr=npr*n;
             n--;
         }
