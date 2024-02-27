@@ -7,6 +7,14 @@ public class maze {
         System.out.println(count(3,3)); // Prints the count of paths again (this line is redundant and can be removed)
         mazePath("", 3, 3, 1, 1); // Prints paths with indices
         System.out.println(mazeDiagonal("",3,3));
+
+        boolean[][] board = {
+                {true,true,true},
+                {true,true,true},
+                {true,true,true},
+        };
+        mazeWithRestrictions("",board,0,0);
+        //AllDirectiins("",board,0,0);
     }
 
     // Method to count the number of paths
@@ -26,7 +34,7 @@ public class maze {
             return;
         }
         if (r > 1){
-            mazePath(p + 'D', r - 1, c);
+            mazePath(p + 'D', r -1, c);
         }
         if (c > 1){
             mazePath(p + 'R', r, c - 1);
@@ -65,5 +73,43 @@ public class maze {
             list.addAll(mazeDiagonal(p+'H',r,c-1));
         }
         return list;
+    }
+    static void mazeWithRestrictions(String p, boolean[][] maze, int r, int c){
+        if (r==maze.length-1 && c == maze[0].length-1){
+            System.out.println(p);
+            return;
+        }
+        if (maze[r][c]==false){
+            return;
+        }
+        if (r<maze.length-1) {
+            mazeWithRestrictions(p + 'D', maze, r + 1, c);
+        }
+        if (c<maze[0].length-1){
+            mazeWithRestrictions(p+'R',maze,r,c+1);
+        }
+
+    }
+
+    static void AllDirectiins(String p, boolean[][] maze,int r, int c){
+        if (r==maze.length-1 && c==maze[0].length-1){
+            System.out.println(p);
+            return;
+        }
+        if (maze[r][c]=false){
+            return;
+        }
+        if (r<maze.length-1){
+            AllDirectiins(p+'D',maze,r+1,c);
+        }
+        if (c<maze[0].length-1){
+            AllDirectiins(p+'R',maze,r,c+1);
+        }
+        if (r>0){
+            AllDirectiins(p+'U',maze,r-1,c);
+        }
+        if (c>0){
+            AllDirectiins(p+'L',maze,r,c-1);
+        }
     }
 }
