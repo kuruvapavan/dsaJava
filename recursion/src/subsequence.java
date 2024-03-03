@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class subsequence {
     public static void main(String[] args) {
-        //subseq("","abc");
-        //System.out.println(subseqret("","abc"));
-        //subseqAscii("","abd");
+        subseq("","abc");
+        System.out.println(subseqret("","abc"));
+        subseqAscii("","abd");
         System.out.println(subseqAsciiRet("","abc"));
 
     }

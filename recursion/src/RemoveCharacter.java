@@ -1,15 +1,17 @@
 public class RemoveCharacter {
     public static void main(String[] args) {
-    String og="baccad";
-//    String resultString = og.replace("a","");
-//
-//        System.out.println(resultString);
-//        String resultString = string(og,0);
-//        System.out.println(resultString);
+        String og="aaaaabbbbbb";
+        String resultString = og.replace("a","");
+
+        System.out.println(resultString);
+           //String resultString = string(og,0);
+      System.out.println(resultString);
         skip("","bacassaasdddaa");
         System.out.println(skip2(og));
         System.out.println(skipWord("applebanana"));
         System.out.println(skipWord2("bananaappleappbana"));
+
+        System.out.println(removeLetter(og));
 
     }
 //    static String string(String s, int i){
@@ -68,6 +70,18 @@ public class RemoveCharacter {
             return skipWord2(s.substring(3));
         }else {
             return s.charAt(0)+skipWord2(s.substring(1));
+        }
+    }
+
+    static String removeLetter(String s){
+        if (s.length()<=1){
+            return s;
+        }
+        if (s.charAt(0)==s.charAt(1)){
+            return removeLetter(s.substring(1));
+        }
+        else {
+            return s.charAt(0) + removeLetter(s.substring(1));
         }
     }
 }
