@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BitwiseMath/BitwiseMath.iml" filepath="$PROJECT_DIR$/BitwiseMath/BitwiseMath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Math/Math.iml" filepath="$PROJECT_DIR$/Math/Math.iml" />
       <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/binary search/binary search.iml" filepath="$PROJECT_DIR$/binary search/binary search.iml" />
       <module fileurl="file://$PROJECT_DIR$/conditions and loops/conditions and loops.iml" filepath="$PROJECT_DIR$/conditions and loops/conditions and loops.iml" />
