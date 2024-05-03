@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class LetterCombinationOfaPhoneNumber {
     public static void main(String[] args) {
-        pad("","12");
-        System.out.println(pad2("","23"));
+        pad2("","12");
+        System.out.println(pad2("","12"));
 
     }
   static ArrayList<String> pad2(String p, String up){
@@ -33,4 +35,5 @@ public class LetterCombinationOfaPhoneNumber {
             pad(p+ch,up.substring(1));
         }
     }
+
 }
